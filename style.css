@@ -1,0 +1,35 @@
+.bg-gradient-main {
+        background: linear-gradient(135deg, #242a44 0%, #1e9090 100%);
+    }
+    .bg-gradient-soft {
+        background: linear-gradient(135deg, #e3eceb 0%, #78c0cf 100%);
+    }
+    .btn-whatsapp {
+        background-color: #25D366;
+        transition: transform 0.3s ease;
+    }
+    .btn-whatsapp:hover {
+        transform: scale(1.05);
+    }
+
+    /* Animation personnalisée pour un effet de battement plus doux si vous préférez au 'ping' standard */
+    @keyframes pulse-soft {
+        0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+        70% { transform: scale(1.05); box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+        100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+    }
+    
+    /* Vous pouvez remplacer 'animate-ping' par cette classe pour un effet plus pro */
+    .animate-pulse-pro {
+        animation: pulse-soft 2s infinite;
+    }
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Optionnel : Ajoute une marge au sommet des sections pour ne pas 
+   qu'elles soient cachées par la navbar fixe lors du scroll */
+section[id] {
+    scroll-margin-top: 80px;
+}

@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UpSell | Boostez votre Chiffre d'Affaires</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <link rel="icon" type="image/jpeg" href="UpSell logo.jpeg" class="rounded-full">
+    <link rel="apple-touch-icon" href="UpSell logo.jpeg" class="rounded-full">
+</head>
+
+<body class="font-sans text-gray-800 bg-[#f9fdfd]">
+
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-3 px-6">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            
+            <div class="flex-1">
+                <a href="#accueil" class="flex items-center gap-3 group">
+                    <img src="UpSell logo.jpeg" alt="Logo UpSell" 
+                        class="w-12 h-12 md:w-14 md:h-14 rounded-full object-cover border-2 border-mintCustom group-hover:scale-110 transition-transform duration-300">
+                    <span class="text-2xl md:text-3xl font-bold tracking-tighter text-white">
+                        Up<span class="text-mintCustom">Sell</span>
+                    </span>
+                </a>
+            </div>
+
+            <div class="hidden md:flex flex-[2] justify-center items-center gap-10 text-white font-medium">
+                <a href="#accueil" class="hover:text-mintCustom transition-colors relative group">
+                    Accueil
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-mintCustom transition-all group-hover:w-full"></span>
+                </a>
+                <a href="#a-propos" class="hover:text-mintCustom transition-colors relative group">
+                    A propos
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-mintCustom transition-all group-hover:w-full"></span>
+                </a>
+                <a href="#services" class="hover:text-mintCustom transition-colors relative group">
+                    Services
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-mintCustom transition-all group-hover:w-full"></span>
+                </a>
+                <a href="#avantages" class="hover:text-mintCustom transition-colors relative group">
+                    Avantages
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-mintCustom transition-all group-hover:w-full"></span>
+                </a>
+                <a href="#faq" class="hover:text-mintCustom transition-colors relative group">
+                    FAQ
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-mintCustom transition-all group-hover:w-full"></span>
+                </a>
+            </div>
+
+            <div class="flex-1 flex justify-end">
+                <a href="https://wa.me/2250767386198" class="hidden md:block bg-mintCustom text-darkBlue px-6 py-2 rounded-full font-bold hover:bg-white transition-all transform hover:scale-105 shadow-lg">
+                    Démarrer
+                </a>
+                <div class="md:hidden text-white text-2xl cursor-pointer" onclick="toggleMenu()">
+                    <i class="fas fa-bars" id="menu-icon"></i>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-darkBlue p-6 flex flex-col gap-4 text-white shadow-xl border-t border-white/10">
+            <a href="#accueil" class="py-2 border-b border-white/5" onclick="toggleMenu()">Accueil</a>
+            <a href="#a-propos" class="py-2 border-b border-white/5" onclick="toggleMenu()">A propos</a>
+            <a href="#probleme" class="py-2 border-b border-white/5" onclick="toggleMenu()">Services</a>
+            <a href="#avantages" class="py-2 border-b border-white/5" onclick="toggleMenu()">Avantages</a>
+            <a href="#faq" class="py-2 border-b border-white/5" onclick="toggleMenu()">FAQ</a>
+            <a href="https://wa.me/2250767386198" class="bg-mintCustom text-darkBlue p-3 rounded-lg font-bold text-center mt-2">
+                Contact WhatsApp
+            </a>
+        </div>
+    </nav>
+
+    <header id="accueil" class="relative min-h-screen flex flex-col justify-center items-center px-6 text-center pt-20 overflow-hidden">
+    
+        <div class="absolute inset-0 z-0">
+            <img src="Markating.avif" 
+                alt="Marketing et Croissance" 
+                class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-br from-darkBlue/90 via-darkBlue/80 to-tealCustom/70"></div>
+        </div>
+
+        <div class="relative z-10 max-w-4xl mx-auto">
+            <h2 class="text-4xl md:text-7xl font-extrabold mb-6 text-white leading-tight drop-shadow-lg">
+                Multipliez vos ventes et <span class="text-mintCustom">dominez</span> votre marché
+            </h2>
+            <p class="text-xl md:text-2xl mb-10 text-blueSky font-medium max-w-2xl mx-auto drop-shadow-md">
+                Ne laissez plus vos concurrents prendre vos clients. Nous construisons votre machine à générer du chiffre d'affaires.
+            </p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center items-center">
+                <a href="https://wa.me/2250767386198" class="btn-whatsapp text-white px-10 py-5 rounded-full text-xl font-bold flex items-center gap-3 shadow-2xl transition-all">
+                    <i class="fab fa-whatsapp text-2xl"></i> Discuter sur WhatsApp
+                </a>
+                <a href="#probleme" class="text-white border-2 border-white/30 hover:bg-white/10 px-10 py-5 rounded-full text-xl font-bold transition-all backdrop-blur-sm">
+                    En savoir plus
+                </a>
+            </div>
+        </div>
+        
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 animate-bounce">
+            <i class="fas fa-chevron-down text-mintCustom text-3xl"></i>
+        </div>
+    </header>
+
+    <section id="a-propos" class="py-16 bg-white px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                
+                <div class="md:w-1/2">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-mintCustom/10 text-mintCustom font-bold text-sm mb-6">
+                        <span class="relative flex h-3 w-3">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-mintCustom opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-3 w-3 bg-mintCustom"></span>
+                        </span>
+                        QUI SOMMES-NOUS ?
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-darkBlue mb-6 leading-tight">
+                        UpSell : L'accélérateur de croissance pour les <span class="text-mintCustom">business ambitieux</span>.
+                    </h2>
+                    <p class="text-gray-600 text-lg leading-relaxed mb-6">
+                        Plus qu'une simple <strong>agence de marketing digital</strong>, UpSell est votre partenaire stratégique. Notre mission est claire : transformer la complexité du web en un moteur de vente simple et puissant pour les <strong>entreprises et commerçants</strong>.
+                    </p>
+                    <div class="flex items-center gap-4 text-darkBlue font-bold">
+                        <div class="flex -space-x-2">
+                            <div class="w-10 h-10 rounded-full border-2 border-white bg-gray-200 flex items-center justify-center text-xs">🚀</div>
+                            <div class="w-10 h-10 rounded-full border-2 border-white bg-gray-200 flex items-center justify-center text-xs">💰</div>
+                            <div class="w-10 h-10 rounded-full border-2 border-white bg-gray-200 flex items-center justify-center text-xs">📈</div>
+                        </div>
+                        <p class="text-sm">Déjà des business propulsés à Yamoussoukro</p>
+                    </div>
+                </div>
+
+                <div class="md:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="p-6 rounded-2xl bg-gray-50 border border-gray-100 hover:shadow-lg transition-shadow">
+                        <h4 class="text-mintCustom font-black text-3xl mb-1">Marketing</h4>
+                        <p class="text-darkBlue font-bold text-sm uppercase tracking-wider">Expertise Digitale</p>
+                        <p class="text-gray-500 text-xs mt-2">Stratégies sur-mesure pour dominer votre marché.</p>
+                    </div>
+                    
+                    <div class="p-6 rounded-2xl bg-darkBlue text-white hover:shadow-lg transition-shadow">
+                        <h4 class="text-mintCustom font-black text-3xl mb-1">+CA</h4>
+                        <p class="text-blueSky font-bold text-sm uppercase tracking-wider">Objectif Ventes</p>
+                        <p class="text-blue-100/60 text-xs mt-2">Nous ne vendons pas des clics, nous vendons du chiffre d'affaires.</p>
+                    </div>
+
+                    <div class="p-6 rounded-2xl bg-gray-50 border border-gray-100 sm:col-span-2 flex items-center justify-between">
+                        <div>
+                            <h4 class="text-darkBlue font-black text-xl">Entreprises & Commerçants</h4>
+                            <p class="text-gray-500 text-sm">Notre cible prioritaire : votre réussite commerciale.</p>
+                        </div>
+                        <i class="fas fa-bullseye text-3xl text-mintCustom opacity-50"></i>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <div class="max-w-4xl mx-auto px-6">
+        <div class="h-px w-full bg-gradient-to-r from-transparent via-gray-200 to-transparent relative">
+            <div class="absolute inset-0 flex items-center justify-center">
+                <div class="h-1.5 w-1.5 rotate-45 bg-mintCustom shadow-[0_0_8px_rgba(20,241,149,0.6)]"></div>
+            </div>
+        </div>
+    </div>
+
+    <section id="services" class="py-20 px-6 max-w-6xl mx-auto">
+        <h3 class="text-3xl font-bold text-center mb-16 text-darkBlue">Pourquoi votre business stagne-t-il ?</h3>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="p-8 bg-white shadow-xl rounded-2xl border-t-4 border-pinkCustom">
+                <i class="fas fa-ghost text-4xl text-pinkCustom mb-4"></i>
+                <h4 class="text-xl font-bold mb-3">Invisibilité Totale</h4>
+                <p>Pas de site web ? Pour vos clients, vous n'existez tout simplement pas en 2024.</p>
+            </div>
+            <div class="p-8 bg-white shadow-xl rounded-2xl border-t-4 border-indigoCustom">
+                <i class="fas fa-thumbs-down text-4xl text-indigoCustom mb-4"></i>
+                <h4 class="text-xl font-bold mb-3">Facebook Mal Exploité</h4>
+                <p>Vous postez, mais personne n'achète. Vos pages manquent de stratégie et de professionnalisme.</p>
+            </div>
+            <div class="p-8 bg-white shadow-xl rounded-2xl border-t-4 border-darkBlue">
+                <i class="fas fa-tasks text-4xl text-darkBlue mb-4"></i>
+                <h4 class="text-xl font-bold mb-3">Gestion Chaotique</h4>
+                <p>Difficile de suivre les commandes entre les commentaires, les messages privés et les appels.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-gradient-soft px-6">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
+            
+            <div class="md:w-1/2">
+                <img src="Digital.jpg" 
+                    alt="Solution de gestion digitale simplifiée UpSell" 
+                    class="rounded-3xl shadow-2xl w-full h-auto object-cover max-h-[400px]">
+            </div>
+
+            <div class="md:w-1/2 text-center md:text-left">
+                <h3 class="text-3xl md:text-4xl font-extrabold mb-6 text-darkBlue leading-tight">
+                    Nous avons compris votre défi. Et nous avons la <span class="text-mintCustom">solution.</span>
+                </h3>
+                <p class="text-lg md:text-xl mb-8 leading-relaxed text-gray-700">
+                    Chez <strong>UpSell</strong>, nous ne créons pas juste des pages, nous créons des systèmes de vente. Nous prenons en charge toute votre infrastructure digitale pour que vous puissiez vous concentrer sur ce que vous faites de mieux : <strong>vendre vos produits.</strong>
+                </p>
+                <div class="flex flex-wrap justify-center md:justify-start gap-4 mt-6">
+                    <span class="bg-white px-5 py-3 rounded-full shadow-md font-semibold text-darkBlue border border-mintCustom/30">Site Web Pro <i class="fas fa-check ml-2 text-mintCustom"></i></span>
+                    <span class="bg-white px-5 py-3 rounded-full shadow-md font-semibold text-darkBlue border border-mintCustom/30">Page Facebook Optimisée <i class="fas fa-check ml-2 text-mintCustom"></i></span>
+                    <span class="bg-white px-5 py-3 rounded-full shadow-md font-semibold text-darkBlue border border-mintCustom/30">WhatsApp Business Expert <i class="fas fa-check ml-2 text-mintCustom"></i></span>
+                    <span class="bg-white px-5 py-3 rounded-full shadow-md font-semibold text-darkBlue border border-mintCustom/30">Référencement Google <i class="fas fa-check ml-2 text-mintCustom"></i></span>
+                </div>
+                <a href="https://wa.me/2250767386198" class="btn-whatsapp text-white mt-10 px-8 py-4 rounded-full text-lg font-bold flex items-center gap-3 shadow-lg w-fit mx-auto md:mx-0">
+                    <i class="fab fa-whatsapp text-2xl"></i> Je veux ma solution !
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="fonctionnement" class="py-20 px-6 max-w-6xl mx-auto">
+        <h3 class="text-3xl font-bold text-center mb-16">Votre transformation en 3 étapes</h3>
+        <div class="grid md:grid-cols-3 gap-12 text-center">
+            <div>
+                <div class="w-16 h-16 bg-mintCustom text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6">1</div>
+                <h4 class="font-bold text-xl mb-2">Audit & Stratégie</h4>
+                <p>On analyse vos besoins et on définit votre tunnel de vente WhatsApp.</p>
+            </div>
+            <div>
+                <div class="w-16 h-16 bg-indigoCustom text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6">2</div>
+                <h4 class="font-bold text-xl mb-2">Déploiement</h4>
+                <p>On crée votre site, votre page Google et on configure vos outils de vente.</p>
+            </div>
+            <div>
+                <div class="w-16 h-16 bg-pinkCustom text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6">3</div>
+                <h4 class="font-bold text-xl mb-2">Explosion des Ventes</h4>
+                <p>Vous recevez des prospects qualifiés directement sur votre WhatsApp.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="avantages" class="py-20 bg-darkBlue text-white px-6 overflow-hidden">
+        <div class="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-16">
+            
+            <div class="lg:w-7/12">
+                <div class="inline-block px-4 py-1 rounded-full bg-mintCustom/10 text-mintCustom text-sm font-bold mb-6 border border-mintCustom/20">
+                    POURQUOI NOUS ?
+                </div>
+                <h3 class="text-3xl md:text-5xl font-extrabold leading-tight mb-8">
+                    Pourquoi choisir <span class="text-mintCustom">UpSell</span> pour une croissance assurée ?
+                </h3>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    
+                    <div class="p-6 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all group">
+                        <div class="w-12 h-12 rounded-lg bg-mintCustom flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                            <i class="fas fa-chart-line text-darkBlue text-xl"></i>
+                        </div>
+                        <h5 class="font-bold text-lg mb-2 text-white">Visibilité Locale</h5>
+                        <p class="text-blueSky text-sm leading-relaxed text-blue-100/70">Devenez le numéro 1 sur Google Maps à Abidjan.</p>
+                    </div>
+
+                    <div class="p-6 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all group">
+                        <div class="w-12 h-12 rounded-lg bg-mintCustom flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                            <i class="fas fa-users text-darkBlue text-xl"></i>
+                        </div>
+                        <h5 class="font-bold text-lg mb-2 text-white">Flux de Clients</h5>
+                        <p class="text-blueSky text-sm leading-relaxed text-blue-100/70">Transformez vos visiteurs en prospects engagés.</p>
+                    </div>
+
+                    <div class="p-6 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all group">
+                        <div class="w-12 h-12 rounded-lg bg-mintCustom flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                            <i class="fas fa-mobile-alt text-darkBlue text-xl"></i>
+                        </div>
+                        <h5 class="font-bold text-lg mb-2 text-white">Ventes WhatsApp</h5>
+                        <p class="text-blueSky text-sm leading-relaxed text-blue-100/70">Gérez vos commandes en un clic sur WhatsApp.</p>
+                    </div>
+
+                    <div class="p-6 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all group">
+                        <div class="w-12 h-12 rounded-lg bg-mintCustom flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                            <i class="fas fa-gem text-darkBlue text-xl"></i>
+                        </div>
+                        <h5 class="font-bold text-lg mb-2 text-white">Crédibilité Pro</h5>
+                        <p class="text-blueSky text-sm leading-relaxed text-blue-100/70">Une image de marque qui inspire confiance.</p>
+                    </div>
+
+                </div>
+
+                <div class="mt-8 flex items-center gap-4 p-4 rounded-xl bg-mintCustom/5 border-l-4 border-mintCustom">
+                    <i class="fas fa-clock text-mintCustom text-xl"></i>
+                    <p class="text-sm text-blueSky"><strong>Gain de temps :</strong> On gère la technique, vous gérez vos ventes.</p>
+                </div>
+            </div>
+
+            <div class="lg:w-5/12 relative">
+                <div class="absolute -top-10 -right-10 w-64 h-64 bg-mintCustom/20 blur-3xl rounded-full"></div>
+                
+                <div class="relative z-10 rounded-3xl p-2 bg-gradient-to-tr from-mintCustom to-transparent shadow-2xl">
+                    <img src="Ventes.jpg" 
+                        alt="Croissance des ventes UpSell" 
+                        class="rounded-2xl w-full h-auto object-cover shadow-inner">
+                </div>
+
+                <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-2xl shadow-2xl flex items-center gap-3 animate-bounce">
+                    <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center text-green-600">
+                        <i class="fas fa-check-circle text-2xl"></i>
+                    </div>
+                    <div>
+                        <p class="text-darkBlue font-black text-xl leading-none">+200%</p>
+                        <p class="text-gray-500 text-[10px] uppercase font-bold tracking-wider">De croissance</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="temoignages" class="py-20 bg-gray-50 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h3 class="text-3xl md:text-5xl font-extrabold text-darkBlue mb-4">
+                    Ils ont fait décoller leur <span class="text-mintCustom">chiffre d'affaires</span>
+                </h3>
+                <p class="text-gray-600 max-w-2xl mx-auto text-lg">
+                    Découvrez comment nos partenaires transforment leurs réseaux sociaux en véritables machines à vendre.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <div class="bg-white p-8 rounded-3xl shadow-xl border-b-4 border-mintCustom hover:-translate-y-2 transition-transform duration-300">
+                    <div class="flex items-center gap-1 text-orange-400 mb-4">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-700 italic mb-6">
+                        "Grâce à UpSell, je reçois au moins 5 demandes sérieuses par jour pour mes appartements à Cocody. Mon site web fait tout le travail de présentation à ma place !"
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center font-bold text-darkBlue">JK</div>
+                        <div>
+                            <h4 class="font-bold text-darkBlue">Jean-Kouassi K.</h4>
+                            <p class="text-xs text-gray-500 uppercase">Agent Immobilier</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-8 rounded-3xl shadow-xl border-b-4 border-mintCustom hover:-translate-y-2 transition-transform duration-300">
+                    <div class="flex items-center gap-1 text-orange-400 mb-4">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-700 italic mb-6">
+                        "Avant, je passais mes journées à répondre aux mêmes questions sur Facebook. Maintenant, tout est automatisé vers mon WhatsApp. Un gain de temps incroyable !"
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-pink-100 flex items-center justify-center font-bold text-darkBlue">MS</div>
+                        <div>
+                            <h4 class="font-bold text-darkBlue">Marie-S.</h4>
+                            <p class="text-xs text-gray-500 uppercase">Boutique de Mode</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-8 rounded-3xl shadow-xl border-b-4 border-mintCustom hover:-translate-y-2 transition-transform duration-300">
+                    <div class="flex items-center gap-1 text-orange-400 mb-4">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-700 italic mb-6">
+                        "Le référencement sur Google Maps a tout changé. Les gens qui cherchent un traiteur à Angré tombent directement sur moi. Mon carnet de commande est plein."
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center font-bold text-darkBlue">AA</div>
+                        <div>
+                            <h4 class="font-bold text-darkBlue">Ahmed A.</h4>
+                            <p class="text-xs text-gray-500 uppercase">Chef Traiteur</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 px-6 text-center bg-gradient-main text-white">
+        <h3 class="text-4xl font-bold mb-6">Prêt à faire décoller votre chiffre d'affaires ?</h3>
+        <p class="text-xl mb-10 opacity-90">Ne laissez pas un autre jour passer sans une présence digitale efficace.</p>
+        <a href="https://wa.me/2250767386198" class="btn-whatsapp inline-flex items-center gap-3 px-10 py-5 rounded-full text-2xl font-bold shadow-2xl">
+            Lancer mon projet maintenant
+        </a>
+    </section>
+
+    <section id="faq" class="py-20 bg-white px-6">
+        <div class="max-w-3xl mx-auto">
+            <h3 class="text-3xl md:text-4xl font-extrabold text-center mb-12 text-darkBlue">
+                Questions <span class="text-mintCustom">Fréquentes</span>
+            </h3>
+
+            <div class="space-y-4">
+                <div class="border border-gray-200 rounded-2xl overflow-hidden shadow-sm">
+                    <button class="w-full flex justify-between items-center p-6 text-left font-bold text-darkBlue hover:bg-gray-50 transition-colors" onclick="toggleFAQ(1)">
+                        <span>Combien ça coûte ?</span>
+                        <i class="fas fa-plus text-mintCustom transition-transform duration-300" id="icon-1"></i>
+                    </button>
+                    <div class="hidden p-6 pt-0 text-gray-600 leading-relaxed" id="ans-1">
+                        Nous proposons des solutions sur mesure adaptées à la taille de votre business. Le retour sur investissement est notre priorité : notre but est que vos gains dépassent largement votre investissement dès les premiers mois. Contactez-nous pour un devis gratuit.
+                    </div>
+                </div>
+
+                <div class="border border-gray-200 rounded-2xl overflow-hidden shadow-sm">
+                    <button class="w-full flex justify-between items-center p-6 text-left font-bold text-darkBlue hover:bg-gray-50 transition-colors" onclick="toggleFAQ(2)">
+                        <span>Combien de temps ?</span>
+                        <i class="fas fa-plus text-mintCustom transition-transform duration-300" id="icon-2"></i>
+                    </button>
+                    <div class="hidden p-6 pt-0 text-gray-600 leading-relaxed" id="ans-2">
+                        En général, votre écosystème digital (site web, optimisation Facebook et WhatsApp) est prêt en "7 à 14 jours". Vous commencez à voir les premiers résultats dès que la machine est lancée.
+                    </div>
+                </div>
+
+                <div class="border border-gray-200 rounded-2xl overflow-hidden shadow-sm">
+                    <button class="w-full flex justify-between items-center p-6 text-left font-bold text-darkBlue hover:bg-gray-50 transition-colors" onclick="toggleFAQ(3)">
+                        <span>Est-ce que je dois être à l’aise avec la technologie ?</span>
+                        <i class="fas fa-plus text-mintCustom transition-transform duration-300" id="icon-3"></i>
+                    </button>
+                    <div class="hidden p-6 pt-0 text-gray-600 leading-relaxed" id="ans-3">
+                        "Pas du tout !" C'est tout l'intérêt d'UpSell. Nous gérons la technique pour vous. Tout ce que vous avez à faire, c'est répondre à vos messages WhatsApp et conclure vos ventes. C'est aussi simple que d'envoyer un message à un ami.
+                    </div>
+                </div>
+
+                <div class="border border-gray-200 rounded-2xl overflow-hidden shadow-sm">
+                    <button class="w-full flex justify-between items-center p-6 text-left font-bold text-darkBlue hover:bg-gray-50 transition-colors" onclick="toggleFAQ(4)">
+                        <span>Est-ce que ça marche pour mon activité ?</span>
+                        <i class="fas fa-plus text-mintCustom transition-transform duration-300" id="icon-4"></i>
+                    </button>
+                    <div class="hidden p-6 pt-0 text-gray-600 leading-relaxed" id="ans-4">
+                        Que vous soyez dans l'immobilier, le commerce, les services ou la restauration, la réponse est "OUI". Si vos clients utilisent WhatsApp et Facebook, alors notre système fonctionnera pour vous rapporter plus de prospects.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-darkBlue text-white pt-16 pb-8 px-6 border-t border-tealCustom/20">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+            
+            <div class="space-y-6">
+                <div class="flex items-center gap-3">
+                    <img src="UpSell logo.jpeg" alt="Logo UpSell" class="w-16 h-16 rounded-full object-cover border-2 border-mintCustom">
+                    <span class="text-2xl font-bold tracking-tighter">Up<span class="text-mintCustom">Sell</span></span>
+                </div>
+                <p class="text-blueSky text-sm leading-relaxed">
+                    L'agence de marketing digital leader en Côte d'Ivoire. Nous transformons votre présence en ligne en une véritable machine à générer du chiffre d'affaires.
+                </p>
+                <div class="flex gap-4">
+                    <a href="https://web.facebook.com/profile.php?id=61587281558736" target="_blank" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-mintCustom hover:text-darkBlue transition-all duration-300">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://wa.me/2250767386198" target="_blank" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-green-500 transition-all duration-300">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div>
+                <h4 class="text-white font-bold mb-6 flex items-center gap-2">
+                    <span class="w-8 h-1 bg-mintCustom rounded-full"></span> Nos Services
+                </h4>
+                <ul class="space-y-4 text-blueSky text-sm">
+                    <li><a href="#" class="hover:text-mintCustom transition-colors flex items-center gap-2 group"><i class="fas fa-arrow-right text-[10px] opacity-0 group-hover:opacity-100 transition-all"></i> Création de Sites Web</a></li>
+                    <li><a href="#" class="hover:text-mintCustom transition-colors flex items-center gap-2 group"><i class="fas fa-arrow-right text-[10px] opacity-0 group-hover:opacity-100 transition-all"></i> Gestion de Page Facebook</a></li>
+                    <li><a href="#" class="hover:text-mintCustom transition-colors flex items-center gap-2 group"><i class="fas fa-arrow-right text-[10px] opacity-0 group-hover:opacity-100 transition-all"></i> WhatsApp Business Expert</a></li>
+                    <li><a href="#" class="hover:text-mintCustom transition-colors flex items-center gap-2 group"><i class="fas fa-arrow-right text-[10px] opacity-0 group-hover:opacity-100 transition-all"></i> SEO Google Maps</a></li>
+                    <li><a href="#" class="hover:text-mintCustom transition-colors flex items-center gap-2 group"><i class="fas fa-arrow-right text-[10px] opacity-0 group-hover:opacity-100 transition-all"></i> Publicité Facebook Ads</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-white font-bold mb-6 flex items-center gap-2">
+                    <span class="w-8 h-1 bg-mintCustom rounded-full"></span> Liens Rapides
+                </h4>
+                <ul class="space-y-4 text-blueSky text-sm">
+                    <li><a href="#accueil" class="hover:text-mintCustom transition-colors">Accueil</a></li>
+                    <li><a href="#fonctionnement" class="hover:text-mintCustom transition-colors">Comment ça marche ?</a></li>
+                    <li><a href="#temoignages" class="hover:text-mintCustom transition-colors">Témoignages</a></li>
+                    <li><a href="#faq" class="hover:text-mintCustom transition-colors">Questions (FAQ)</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-white font-bold mb-6 flex items-center gap-2">
+                    <span class="w-8 h-1 bg-mintCustom rounded-full"></span> Contact
+                </h4>
+                <ul class="space-y-4 text-blueSky text-sm">
+                    <li class="flex items-center gap-3">
+                        <div class="w-8 h-8 rounded bg-white/5 flex items-center justify-center text-mintCustom shrink-0">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <span>+225 07 67 38 61 98</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <div class="w-8 h-8 rounded bg-white/5 flex items-center justify-center text-mintCustom shrink-0">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <span class="break-all">agenceupsell@gmail.com</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <div class="w-8 h-8 rounded bg-white/5 flex items-center justify-center text-mintCustom shrink-0">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <span>Lun - Ven: 08h00 - 18h00</span>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="max-w-6xl mx-auto mt-16 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-blueSky text-xs">
+            <p>© 2026 UpSell Digital Agency. Tous droits réservés.</p>
+            <div class="flex items-center gap-2">
+                <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+                <span>Propulsé par <strong>UpSell Tech</strong></span>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/2250767386198" 
+        target="_blank" 
+        class="fixed bottom-8 right-8 z-[100] group flex items-center justify-center"
+        aria-label="Contactez-nous sur WhatsApp">
+            
+            <span class="absolute right-full mr-4 bg-white text-darkBlue px-4 py-2 rounded-lg shadow-xl text-sm font-bold whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 hidden md:block">
+                Besoin d'aide ? Discutons !
+            </span>
+
+            <span class="absolute inline-flex h-full w-full rounded-full bg-[#25D366] opacity-75 animate-ping"></span>
+            
+            <div class="relative bg-[#25D366] text-white w-16 h-16 rounded-full shadow-2xl flex items-center justify-center text-3xl hover:scale-110 transition-transform duration-300">
+                <i class="fab fa-whatsapp"></i>
+            </div>
+    </a>
+
+</body>
+</html>
