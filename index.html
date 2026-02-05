@@ -7,6 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
     <link rel="icon" type="image/jpeg" href="UpSell logo.jpeg" class="rounded-full">
     <link rel="apple-touch-icon" href="UpSell logo.jpeg" class="rounded-full">
     <!-- Meta Pixel Code -->
@@ -551,47 +552,6 @@
                 <i class="fab fa-whatsapp"></i>
             </div>
     </a>
-
-    <script>
-    // Le code est mis directement ici pour éviter l'erreur 404
-    window.generateEventId = () => 'wa_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
-
-    window.getCookie = (name) => {
-        const value = `; ${document.cookie}`;
-        const parts = value.split(`; ${name}=`);
-        if (parts.length === 2) return parts.pop().split(';').shift();
-    };
-
-    document.addEventListener('DOMContentLoaded', () => {
-        console.log("Script de tracking chargé !");
-        
-        document.querySelectorAll('.btn-whatsapp').forEach(button => {
-            button.addEventListener('click', function(e) {
-                const eventId = window.generateEventId();
-                console.log('Clic détecté ! ID:', eventId);
-
-                // A. PIXEL
-                if (typeof fbq !== 'undefined') {
-                    fbq('track', 'Contact', {}, { eventID: eventId });
-                    console.log('Signal Pixel envoyé');
-                }
-
-                // B. RENDER (SERVEUR)
-                fetch('https://meta-capi-bridge.onrender.com/track-whatsapp', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({
-                        event_id: eventId,
-                        url: window.location.href,
-                        fbp: window.getCookie('_fbp'),
-                        fbc: window.getCookie('_fbc'),
-                        test_code: 'TEST15470'
-                    })
-                }).then(() => console.log('Signal Serveur envoyé'));
-            });
-        });
-    });
-    </script>
 
 </body>
 </html>
