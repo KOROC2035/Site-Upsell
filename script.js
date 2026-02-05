@@ -15,13 +15,14 @@ tailwind.config = {
     }
 };
 
-// 2. FONCTIONS UTILITAIRES (Cookies & Event ID)
+// 2. FONCTIONS UTILITAIRES
 const generateEventId = () => 'wa_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
 
 function getCookie(name) {
     const value = `; ${document.cookie}`;
     const parts = value.split(`; ${name}=`);
     if (parts.length === 2) return parts.pop().split(';').shift();
+    return null;
 }
 
 // 3. GESTION DU SCROLL (Navbar)
@@ -72,7 +73,6 @@ document.addEventListener('DOMContentLoaded', () => {
             const targetId = this.getAttribute('href');
             const targetElement = document.querySelector(targetId);
             if (targetElement) {
-                // Fermeture menu mobile
                 const mobileMenu = document.getElementById('mobile-menu');
                 if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
                     toggleMenu();
@@ -84,15 +84,21 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // --- TRACKING WHATSAPP (CAPI + PIXEL) ---
+    // --- TRACKING WHATSAPP + OUVERTURE NOUVEL ONGLET ---
     document.querySelectorAll('.btn-whatsapp').forEach(button => {
-        button.addEventListener('click', () => {
-            const eventId = generateEventId();
+        button.addEventListener('click', function(e) {
+            // On bloque l'ouverture immédiate par défaut
+            e.preventDefault(); 
             
+            const eventId = generateEventId();
+            const urlDestination = this.getAttribute('href'); 
+            
+            console.log('✅ Clic détecté ! ID:', eventId);
+
             // A. ENVOI NAVIGATEUR (Pixel Meta)
             if (typeof fbq !== 'undefined') {
                 fbq('track', 'Contact', {}, { eventID: eventId });
-                console.log('Pixel : Événement Contact envoyé avec ID', eventId);
+                console.log('📡 Pixel : Signal envoyé');
             }
 
             // B. ENVOI SERVEUR (Render)
@@ -107,8 +113,14 @@ document.addEventListener('DOMContentLoaded', () => {
                     test_code: 'TEST15470' 
                 })
             })
-            .then(res => console.log('CAPI : Signal serveur envoyé avec succès'))
-            .catch(err => console.error('CAPI : Erreur lors de l\'envoi serveur', err));
+            .then(() => console.log('📡 CAPI : Signal serveur envoyé'))
+            .catch(err => console.error('❌ CAPI : Erreur', err));
+
+            // C. OUVERTURE WHATSAPP DANS UN NOUVEL ONGLET
+            // On attend 200ms pour laisser les scripts démarrer l'envoi
+            setTimeout(() => {
+                window.open(urlDestination, '_blank');
+            }, 200);
         });
     });
 });
